@@ -1,0 +1,3020 @@
+(globalThis["TURBOPACK"] || (globalThis["TURBOPACK"] = [])).push([typeof document === "object" ? document.currentScript : undefined,
+"[project]/app/page.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>DashboardPage
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AppShell$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/AppShell.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$TopBar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/TopBar.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatusBadge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/StatusBadge.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$UploadModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/UploadModal.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$mockRecords$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/data/mockRecords.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+;
+;
+;
+;
+const recentRecords = __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$mockRecords$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["mockRecords"].slice(0, 8);
+const summaryStats = [
+    {
+        label: "Documents Reviewed",
+        value: "247",
+        change: "+12 this week",
+        positive: true,
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 21,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/app/page.tsx",
+            lineNumber: 20,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0)),
+        color: "text-green-600",
+        bg: "bg-green-50"
+    },
+    {
+        label: "Pending Review",
+        value: "14",
+        change: "4 added today",
+        positive: false,
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 35,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/app/page.tsx",
+            lineNumber: 34,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0)),
+        color: "text-amber-600",
+        bg: "bg-amber-50"
+    },
+    {
+        label: "Results Available",
+        value: "189",
+        change: "View all",
+        positive: true,
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 49,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/app/page.tsx",
+            lineNumber: 48,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0)),
+        color: "text-blue-600",
+        bg: "bg-blue-50"
+    },
+    {
+        label: "Flagged for Review",
+        value: "3",
+        change: "Needs attention",
+        positive: false,
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 63,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/app/page.tsx",
+            lineNumber: 62,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0)),
+        color: "text-red-600",
+        bg: "bg-red-50"
+    }
+];
+function DashboardPage() {
+    _s();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const [uploadOpen, setUploadOpen] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$AppShell$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$TopBar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                title: "Dashboard",
+                subtitle: "Welcome back — here's what's happening today",
+                action: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                    onClick: ()=>setUploadOpen(true),
+                    className: "flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                            className: "w-4 h-4",
+                            fill: "none",
+                            stroke: "currentColor",
+                            viewBox: "0 0 24 24",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                strokeLinecap: "round",
+                                strokeLinejoin: "round",
+                                strokeWidth: 2,
+                                d: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.tsx",
+                                lineNumber: 87,
+                                columnNumber: 15
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/app/page.tsx",
+                            lineNumber: 86,
+                            columnNumber: 13
+                        }, this),
+                        "Upload Document"
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/app/page.tsx",
+                    lineNumber: 82,
+                    columnNumber: 11
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 78,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "flex-1 px-8 py-6 space-y-6",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "grid grid-cols-4 gap-4",
+                        children: summaryStats.map((stat)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "bg-white rounded-xl border border-gray-200 p-5",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "flex items-start justify-between",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-sm text-gray-500",
+                                                    children: stat.label
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 102,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: "text-3xl font-bold text-gray-900 mt-1",
+                                                    children: stat.value
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 103,
+                                                    columnNumber: 19
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                    className: `text-xs mt-1.5 font-medium ${stat.positive ? "text-green-600" : "text-gray-400"}`,
+                                                    children: stat.change
+                                                }, void 0, false, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 104,
+                                                    columnNumber: 19
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/app/page.tsx",
+                                            lineNumber: 101,
+                                            columnNumber: 17
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: `p-2.5 rounded-lg ${stat.bg}`,
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: stat.color,
+                                                children: stat.icon
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/page.tsx",
+                                                lineNumber: 109,
+                                                columnNumber: 19
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/page.tsx",
+                                            lineNumber: 108,
+                                            columnNumber: 17
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/page.tsx",
+                                    lineNumber: 100,
+                                    columnNumber: 15
+                                }, this)
+                            }, stat.label, false, {
+                                fileName: "[project]/app/page.tsx",
+                                lineNumber: 99,
+                                columnNumber: 13
+                            }, this))
+                    }, void 0, false, {
+                        fileName: "[project]/app/page.tsx",
+                        lineNumber: 97,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "bg-white rounded-xl border border-gray-200",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "px-6 py-4 border-b border-gray-100 flex items-center justify-between",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                className: "text-sm font-semibold text-gray-900",
+                                                children: "Recent Documents"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/page.tsx",
+                                                lineNumber: 120,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xs text-gray-400 mt-0.5",
+                                                children: "Most recently processed records"
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/page.tsx",
+                                                lineNumber: 121,
+                                                columnNumber: 15
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/app/page.tsx",
+                                        lineNumber: 119,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>router.push("/documents"),
+                                        className: "text-xs text-blue-600 hover:text-blue-700 font-medium",
+                                        children: "View all →"
+                                    }, void 0, false, {
+                                        fileName: "[project]/app/page.tsx",
+                                        lineNumber: 123,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/app/page.tsx",
+                                lineNumber: 118,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "overflow-x-auto",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("table", {
+                                    className: "w-full",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("thead", {
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                                className: "border-b border-gray-50",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                        className: "text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-6 py-3",
+                                                        children: "Patient"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/page.tsx",
+                                                        lineNumber: 135,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                        className: "text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-4 py-3",
+                                                        children: "Document Type"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/page.tsx",
+                                                        lineNumber: 138,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                        className: "text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-4 py-3",
+                                                        children: "Date"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/page.tsx",
+                                                        lineNumber: 141,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                        className: "text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-4 py-3",
+                                                        children: "Status"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/page.tsx",
+                                                        lineNumber: 144,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                        className: "text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-4 py-3",
+                                                        children: "Medications"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/page.tsx",
+                                                        lineNumber: 147,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                        className: "text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-4 py-3",
+                                                        children: "Diagnoses"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/page.tsx",
+                                                        lineNumber: 150,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("th", {
+                                                        className: "px-4 py-3"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/page.tsx",
+                                                        lineNumber: 153,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/page.tsx",
+                                                lineNumber: 134,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/page.tsx",
+                                            lineNumber: 133,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tbody", {
+                                            className: "divide-y divide-gray-50",
+                                            children: recentRecords.map((record)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("tr", {
+                                                    onClick: ()=>router.push(`/results/${record.id}`),
+                                                    className: "hover:bg-gray-50 cursor-pointer transition-colors group",
+                                                    children: [
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                            className: "px-6 py-4",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                className: "flex items-center gap-3",
+                                                                children: [
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        className: "w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center shrink-0",
+                                                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                            className: "text-xs font-semibold text-blue-700",
+                                                                            children: record.patientName.split(" ").map((n)=>n[0]).join("").slice(0, 2)
+                                                                        }, void 0, false, {
+                                                                            fileName: "[project]/app/page.tsx",
+                                                                            lineNumber: 166,
+                                                                            columnNumber: 27
+                                                                        }, this)
+                                                                    }, void 0, false, {
+                                                                        fileName: "[project]/app/page.tsx",
+                                                                        lineNumber: 165,
+                                                                        columnNumber: 25
+                                                                    }, this),
+                                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                                        children: [
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                className: "text-sm font-medium text-gray-900",
+                                                                                children: record.patientName
+                                                                            }, void 0, false, {
+                                                                                fileName: "[project]/app/page.tsx",
+                                                                                lineNumber: 171,
+                                                                                columnNumber: 27
+                                                                            }, this),
+                                                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                                                className: "text-xs text-gray-400",
+                                                                                children: [
+                                                                                    "DOB: ",
+                                                                                    record.dateOfBirth
+                                                                                ]
+                                                                            }, void 0, true, {
+                                                                                fileName: "[project]/app/page.tsx",
+                                                                                lineNumber: 172,
+                                                                                columnNumber: 27
+                                                                            }, this)
+                                                                        ]
+                                                                    }, void 0, true, {
+                                                                        fileName: "[project]/app/page.tsx",
+                                                                        lineNumber: 170,
+                                                                        columnNumber: 25
+                                                                    }, this)
+                                                                ]
+                                                            }, void 0, true, {
+                                                                fileName: "[project]/app/page.tsx",
+                                                                lineNumber: 164,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/page.tsx",
+                                                            lineNumber: 163,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                            className: "px-4 py-4 text-sm text-gray-600",
+                                                            children: record.documentType
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/page.tsx",
+                                                            lineNumber: 176,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                            className: "px-4 py-4 text-sm text-gray-500",
+                                                            children: record.documentDate
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/page.tsx",
+                                                            lineNumber: 177,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                            className: "px-4 py-4",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$StatusBadge$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                                                status: record.status
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/page.tsx",
+                                                                lineNumber: 179,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/page.tsx",
+                                                            lineNumber: 178,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                            className: "px-4 py-4",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "text-sm font-medium text-gray-900",
+                                                                    children: record.medications.length
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/page.tsx",
+                                                                    lineNumber: 182,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "text-xs text-gray-400 ml-1",
+                                                                    children: "identified"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/page.tsx",
+                                                                    lineNumber: 183,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/page.tsx",
+                                                            lineNumber: 181,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                            className: "px-4 py-4",
+                                                            children: [
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "text-sm font-medium text-gray-900",
+                                                                    children: record.diagnoses.length
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/page.tsx",
+                                                                    lineNumber: 186,
+                                                                    columnNumber: 23
+                                                                }, this),
+                                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                    className: "text-xs text-gray-400 ml-1",
+                                                                    children: "identified"
+                                                                }, void 0, false, {
+                                                                    fileName: "[project]/app/page.tsx",
+                                                                    lineNumber: 187,
+                                                                    columnNumber: 23
+                                                                }, this)
+                                                            ]
+                                                        }, void 0, true, {
+                                                            fileName: "[project]/app/page.tsx",
+                                                            lineNumber: 185,
+                                                            columnNumber: 21
+                                                        }, this),
+                                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("td", {
+                                                            className: "px-4 py-4 text-right",
+                                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                                className: "text-xs text-blue-600 group-hover:text-blue-700 font-medium",
+                                                                children: "View →"
+                                                            }, void 0, false, {
+                                                                fileName: "[project]/app/page.tsx",
+                                                                lineNumber: 190,
+                                                                columnNumber: 23
+                                                            }, this)
+                                                        }, void 0, false, {
+                                                            fileName: "[project]/app/page.tsx",
+                                                            lineNumber: 189,
+                                                            columnNumber: 21
+                                                        }, this)
+                                                    ]
+                                                }, record.id, true, {
+                                                    fileName: "[project]/app/page.tsx",
+                                                    lineNumber: 158,
+                                                    columnNumber: 19
+                                                }, this))
+                                        }, void 0, false, {
+                                            fileName: "[project]/app/page.tsx",
+                                            lineNumber: 156,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/app/page.tsx",
+                                    lineNumber: 132,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.tsx",
+                                lineNumber: 131,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/page.tsx",
+                        lineNumber: 117,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "bg-white rounded-xl border border-gray-200 p-5",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                className: "text-sm font-semibold text-gray-900 mb-4",
+                                children: "Recent Activity"
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.tsx",
+                                lineNumber: 203,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-3",
+                                children: [
+                                    {
+                                        text: "Document reviewed: Eleanor Hartwell — Primary Care Visit",
+                                        time: "2 min ago",
+                                        color: "bg-green-500"
+                                    },
+                                    {
+                                        text: "New document uploaded: Loretta Chukwuemeka — Urgent Care",
+                                        time: "18 min ago",
+                                        color: "bg-blue-500"
+                                    },
+                                    {
+                                        text: "Flagged for review: Patricia Okonkwo — HbA1c 9.1% above target",
+                                        time: "1 hr ago",
+                                        color: "bg-red-500"
+                                    },
+                                    {
+                                        text: "Processing completed: Howard Nkemdirim — Sleep Medicine",
+                                        time: "2 hr ago",
+                                        color: "bg-purple-500"
+                                    },
+                                    {
+                                        text: "Download: Desmond Fairfax — Review Form",
+                                        time: "3 hr ago",
+                                        color: "bg-gray-400"
+                                    }
+                                ].map((item, i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex items-start gap-3",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: `w-2 h-2 rounded-full ${item.color} mt-1.5 shrink-0`
+                                            }, void 0, false, {
+                                                fileName: "[project]/app/page.tsx",
+                                                lineNumber: 213,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex-1 min-w-0",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-sm text-gray-700",
+                                                        children: item.text
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/page.tsx",
+                                                        lineNumber: 215,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-xs text-gray-400 mt-0.5",
+                                                        children: item.time
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/app/page.tsx",
+                                                        lineNumber: 216,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/app/page.tsx",
+                                                lineNumber: 214,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, i, true, {
+                                        fileName: "[project]/app/page.tsx",
+                                        lineNumber: 212,
+                                        columnNumber: 15
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/app/page.tsx",
+                                lineNumber: 204,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/app/page.tsx",
+                        lineNumber: 202,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 95,
+                columnNumber: 7
+            }, this),
+            uploadOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$UploadModal$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                onClose: ()=>setUploadOpen(false)
+            }, void 0, false, {
+                fileName: "[project]/app/page.tsx",
+                lineNumber: 224,
+                columnNumber: 22
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/app/page.tsx",
+        lineNumber: 77,
+        columnNumber: 5
+    }, this);
+}
+_s(DashboardPage, "27wkuOm8lTqiJd85v+XddmfMDjA=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
+_c = DashboardPage;
+var _c;
+__turbopack_context__.k.register(_c, "DashboardPage");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/components/AppShell.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>AppShell
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Sidebar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/Sidebar.tsx [app-client] (ecmascript)");
+;
+;
+function AppShell({ children }) {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "flex min-h-screen bg-gray-50",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$Sidebar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
+                fileName: "[project]/components/AppShell.tsx",
+                lineNumber: 6,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
+                className: "flex-1 flex flex-col min-w-0",
+                children: children
+            }, void 0, false, {
+                fileName: "[project]/components/AppShell.tsx",
+                lineNumber: 7,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/AppShell.tsx",
+        lineNumber: 5,
+        columnNumber: 5
+    }, this);
+}
+_c = AppShell;
+var _c;
+__turbopack_context__.k.register(_c, "AppShell");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/components/ProcessingScreen.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>ProcessingScreen
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+const STAGES = [
+    {
+        label: "Uploading document",
+        detail: "Transferring file to secure processing environment..."
+    },
+    {
+        label: "Reading document",
+        detail: "Parsing document structure and extracting raw text..."
+    },
+    {
+        label: "Identifying medications",
+        detail: "Running NLP models to detect medication references..."
+    },
+    {
+        label: "Identifying diagnoses",
+        detail: "Cross-referencing ICD-10 code patterns and clinical terminology..."
+    },
+    {
+        label: "Extracting relevant information",
+        detail: "Mapping extracted data to structured review format..."
+    },
+    {
+        label: "Preparing results",
+        detail: "Finalizing review and generating output..."
+    }
+];
+function ProcessingScreen({ filename, onComplete }) {
+    _s();
+    const [currentStage, setCurrentStage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [progress, setProgress] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(0);
+    const [done, setDone] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "ProcessingScreen.useEffect": ()=>{
+            const totalDuration = 4500; // ms
+            const intervalMs = 80;
+            let elapsed = 0;
+            const interval = setInterval({
+                "ProcessingScreen.useEffect.interval": ()=>{
+                    elapsed += intervalMs;
+                    const pct = Math.min(Math.floor(elapsed / totalDuration * 100), 100);
+                    setProgress(pct);
+                    const stageIndex = Math.min(Math.floor(pct / 100 * STAGES.length), STAGES.length - 1);
+                    setCurrentStage(stageIndex);
+                    if (pct >= 100) {
+                        clearInterval(interval);
+                        setDone(true);
+                        setTimeout({
+                            "ProcessingScreen.useEffect.interval": ()=>onComplete()
+                        }["ProcessingScreen.useEffect.interval"], 600);
+                    }
+                }
+            }["ProcessingScreen.useEffect.interval"], intervalMs);
+            return ({
+                "ProcessingScreen.useEffect": ()=>clearInterval(interval)
+            })["ProcessingScreen.useEffect"];
+        }
+    }["ProcessingScreen.useEffect"], [
+        onComplete
+    ]);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed inset-0 z-50 bg-white flex items-center justify-center",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "w-full max-w-md px-8 text-center",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "relative w-20 h-20 mx-auto mb-8",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 rounded-full border-4 border-blue-100"
+                            }, void 0, false, {
+                                fileName: "[project]/components/ProcessingScreen.tsx",
+                                lineNumber: 55,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 rounded-full border-4 border-blue-600 border-t-transparent transition-transform",
+                                style: {
+                                    animation: done ? "none" : "spin 1s linear infinite"
+                                }
+                            }, void 0, false, {
+                                fileName: "[project]/components/ProcessingScreen.tsx",
+                                lineNumber: 56,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "absolute inset-0 flex items-center justify-center",
+                                children: done ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    className: "w-8 h-8 text-blue-600",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    viewBox: "0 0 24 24",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: 2.5,
+                                        d: "M5 13l4 4L19 7"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ProcessingScreen.tsx",
+                                        lineNumber: 65,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/components/ProcessingScreen.tsx",
+                                    lineNumber: 64,
+                                    columnNumber: 15
+                                }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    className: "w-8 h-8 text-blue-600",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    viewBox: "0 0 24 24",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: 1.5,
+                                        d: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ProcessingScreen.tsx",
+                                        lineNumber: 69,
+                                        columnNumber: 17
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/components/ProcessingScreen.tsx",
+                                    lineNumber: 68,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/components/ProcessingScreen.tsx",
+                                lineNumber: 62,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/ProcessingScreen.tsx",
+                        lineNumber: 54,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                        className: "text-xl font-semibold text-gray-900 mb-1",
+                        children: done ? "Review Complete" : "Analyzing Document"
+                    }, void 0, false, {
+                        fileName: "[project]/components/ProcessingScreen.tsx",
+                        lineNumber: 77,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-sm text-gray-400 mb-8 truncate max-w-xs mx-auto",
+                        children: filename
+                    }, void 0, false, {
+                        fileName: "[project]/components/ProcessingScreen.tsx",
+                        lineNumber: 80,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "mb-6",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center justify-between mb-2",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-xs text-gray-400",
+                                        children: "Processing"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ProcessingScreen.tsx",
+                                        lineNumber: 85,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-xs font-semibold text-blue-600",
+                                        children: [
+                                            progress,
+                                            "%"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/ProcessingScreen.tsx",
+                                        lineNumber: 86,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/ProcessingScreen.tsx",
+                                lineNumber: 84,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "w-full bg-gray-100 rounded-full h-2",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "bg-blue-600 h-2 rounded-full transition-all duration-100",
+                                    style: {
+                                        width: `${progress}%`
+                                    }
+                                }, void 0, false, {
+                                    fileName: "[project]/components/ProcessingScreen.tsx",
+                                    lineNumber: 89,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/components/ProcessingScreen.tsx",
+                                lineNumber: 88,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/ProcessingScreen.tsx",
+                        lineNumber: 83,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "space-y-2 text-left",
+                        children: STAGES.map((stage, i)=>{
+                            const isComplete = i < currentStage || done;
+                            const isCurrent = i === currentStage && !done;
+                            return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: `flex items-start gap-3 px-4 py-2.5 rounded-lg transition-all ${isCurrent ? "bg-blue-50" : ""}`,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: `w-5 h-5 rounded-full shrink-0 mt-0.5 flex items-center justify-center ${isComplete ? "bg-green-100" : isCurrent ? "bg-blue-100" : "bg-gray-100"}`,
+                                        children: isComplete ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                            className: "w-3 h-3 text-green-600",
+                                            fill: "none",
+                                            stroke: "currentColor",
+                                            viewBox: "0 0 24 24",
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                strokeLinecap: "round",
+                                                strokeLinejoin: "round",
+                                                strokeWidth: 3,
+                                                d: "M5 13l4 4L19 7"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/ProcessingScreen.tsx",
+                                                lineNumber: 117,
+                                                columnNumber: 23
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/ProcessingScreen.tsx",
+                                            lineNumber: 116,
+                                            columnNumber: 21
+                                        }, this) : isCurrent ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "w-2 h-2 rounded-full bg-blue-600 animate-pulse"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/ProcessingScreen.tsx",
+                                            lineNumber: 120,
+                                            columnNumber: 21
+                                        }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            className: "w-2 h-2 rounded-full bg-gray-300"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/ProcessingScreen.tsx",
+                                            lineNumber: 122,
+                                            columnNumber: 21
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/ProcessingScreen.tsx",
+                                        lineNumber: 108,
+                                        columnNumber: 17
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: `text-sm font-medium ${isComplete ? "text-gray-600" : isCurrent ? "text-blue-800" : "text-gray-400"}`,
+                                                children: stage.label
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/ProcessingScreen.tsx",
+                                                lineNumber: 126,
+                                                columnNumber: 19
+                                            }, this),
+                                            isCurrent && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xs text-blue-500 mt-0.5",
+                                                children: stage.detail
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/ProcessingScreen.tsx",
+                                                lineNumber: 132,
+                                                columnNumber: 21
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/ProcessingScreen.tsx",
+                                        lineNumber: 125,
+                                        columnNumber: 17
+                                    }, this)
+                                ]
+                            }, i, true, {
+                                fileName: "[project]/components/ProcessingScreen.tsx",
+                                lineNumber: 102,
+                                columnNumber: 15
+                            }, this);
+                        })
+                    }, void 0, false, {
+                        fileName: "[project]/components/ProcessingScreen.tsx",
+                        lineNumber: 97,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/ProcessingScreen.tsx",
+                lineNumber: 52,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
+                children: `
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `
+            }, void 0, false, {
+                fileName: "[project]/components/ProcessingScreen.tsx",
+                lineNumber: 141,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/ProcessingScreen.tsx",
+        lineNumber: 51,
+        columnNumber: 5
+    }, this);
+}
+_s(ProcessingScreen, "OpXJPOvxtN6HalTWPC4hyBKzank=");
+_c = ProcessingScreen;
+var _c;
+__turbopack_context__.k.register(_c, "ProcessingScreen");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/components/Sidebar.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>Sidebar
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+const navItems = [
+    {
+        label: "Dashboard",
+        href: "/",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+            }, void 0, false, {
+                fileName: "[project]/components/Sidebar.tsx",
+                lineNumber: 12,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/components/Sidebar.tsx",
+            lineNumber: 11,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
+    },
+    {
+        label: "Documents",
+        href: "/documents",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            }, void 0, false, {
+                fileName: "[project]/components/Sidebar.tsx",
+                lineNumber: 22,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/components/Sidebar.tsx",
+            lineNumber: 21,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
+    },
+    {
+        label: "Results",
+        href: "/results",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: 2,
+                d: "M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+            }, void 0, false, {
+                fileName: "[project]/components/Sidebar.tsx",
+                lineNumber: 32,
+                columnNumber: 9
+            }, ("TURBOPACK compile-time value", void 0))
+        }, void 0, false, {
+            fileName: "[project]/components/Sidebar.tsx",
+            lineNumber: 31,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
+    },
+    {
+        label: "Settings",
+        href: "/settings",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+            className: "w-5 h-5",
+            fill: "none",
+            stroke: "currentColor",
+            viewBox: "0 0 24 24",
+            children: [
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeWidth: 2,
+                    d: "M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                }, void 0, false, {
+                    fileName: "[project]/components/Sidebar.tsx",
+                    lineNumber: 42,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0)),
+                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                    strokeLinecap: "round",
+                    strokeLinejoin: "round",
+                    strokeWidth: 2,
+                    d: "M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                }, void 0, false, {
+                    fileName: "[project]/components/Sidebar.tsx",
+                    lineNumber: 44,
+                    columnNumber: 9
+                }, ("TURBOPACK compile-time value", void 0))
+            ]
+        }, void 0, true, {
+            fileName: "[project]/components/Sidebar.tsx",
+            lineNumber: 41,
+            columnNumber: 7
+        }, ("TURBOPACK compile-time value", void 0))
+    }
+];
+function Sidebar() {
+    _s();
+    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
+    const isActive = (href)=>{
+        if (href === "/") return pathname === "/";
+        return pathname.startsWith(href);
+    };
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
+        className: "w-60 min-h-screen bg-white border-r border-gray-200 flex flex-col",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "px-6 py-5 border-b border-gray-100",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-center gap-2.5",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                className: "w-4 h-4 text-white",
+                                fill: "none",
+                                stroke: "currentColor",
+                                viewBox: "0 0 24 24",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                    strokeLinecap: "round",
+                                    strokeLinejoin: "round",
+                                    strokeWidth: 2.5,
+                                    d: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Sidebar.tsx",
+                                    lineNumber: 65,
+                                    columnNumber: 15
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/components/Sidebar.tsx",
+                                lineNumber: 64,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/components/Sidebar.tsx",
+                            lineNumber: 63,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                    className: "font-semibold text-gray-900 text-sm leading-none",
+                                    children: "MedParse"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Sidebar.tsx",
+                                    lineNumber: 70,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-xs text-gray-400 mt-0.5",
+                                    children: "Document Review"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Sidebar.tsx",
+                                    lineNumber: 71,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Sidebar.tsx",
+                            lineNumber: 69,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/Sidebar.tsx",
+                    lineNumber: 62,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/Sidebar.tsx",
+                lineNumber: 61,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
+                className: "flex-1 px-3 py-4 space-y-0.5",
+                children: navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                        href: item.href,
+                        className: `flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${isActive(item.href) ? "bg-blue-50 text-blue-700" : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"}`,
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: isActive(item.href) ? "text-blue-600" : "text-gray-400",
+                                children: item.icon
+                            }, void 0, false, {
+                                fileName: "[project]/components/Sidebar.tsx",
+                                lineNumber: 88,
+                                columnNumber: 13
+                            }, this),
+                            item.label
+                        ]
+                    }, item.href, true, {
+                        fileName: "[project]/components/Sidebar.tsx",
+                        lineNumber: 79,
+                        columnNumber: 11
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/components/Sidebar.tsx",
+                lineNumber: 77,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "px-4 py-4 border-t border-gray-100",
+                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                    className: "flex items-center gap-3 px-2",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "w-7 h-7 rounded-full bg-blue-100 flex items-center justify-center",
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                className: "text-xs font-semibold text-blue-700",
+                                children: "D"
+                            }, void 0, false, {
+                                fileName: "[project]/components/Sidebar.tsx",
+                                lineNumber: 100,
+                                columnNumber: 13
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/components/Sidebar.tsx",
+                            lineNumber: 99,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "flex-1 min-w-0",
+                            children: [
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-xs font-medium text-gray-800 truncate",
+                                    children: "Demo User"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Sidebar.tsx",
+                                    lineNumber: 103,
+                                    columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-xs text-gray-400 truncate",
+                                    children: "demo@medparse.ai"
+                                }, void 0, false, {
+                                    fileName: "[project]/components/Sidebar.tsx",
+                                    lineNumber: 104,
+                                    columnNumber: 13
+                                }, this)
+                            ]
+                        }, void 0, true, {
+                            fileName: "[project]/components/Sidebar.tsx",
+                            lineNumber: 102,
+                            columnNumber: 11
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                            className: "shrink-0 text-xs bg-green-100 text-green-700 px-1.5 py-0.5 rounded font-medium",
+                            children: "Demo"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Sidebar.tsx",
+                            lineNumber: 106,
+                            columnNumber: 11
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/components/Sidebar.tsx",
+                    lineNumber: 98,
+                    columnNumber: 9
+                }, this)
+            }, void 0, false, {
+                fileName: "[project]/components/Sidebar.tsx",
+                lineNumber: 97,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/Sidebar.tsx",
+        lineNumber: 59,
+        columnNumber: 5
+    }, this);
+}
+_s(Sidebar, "xbyQPtUVMO7MNj7WjJlpdWqRcTo=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"]
+    ];
+});
+_c = Sidebar;
+var _c;
+__turbopack_context__.k.register(_c, "Sidebar");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/components/StatusBadge.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>StatusBadge
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$mockRecords$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/data/mockRecords.ts [app-client] (ecmascript)");
+;
+;
+function StatusBadge({ status }) {
+    const colors = (0, __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$mockRecords$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["getStatusColor"])(status);
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+        className: `inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${colors.bg} ${colors.text}`,
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: `w-1.5 h-1.5 rounded-full ${colors.dot}`
+            }, void 0, false, {
+                fileName: "[project]/components/StatusBadge.tsx",
+                lineNumber: 7,
+                columnNumber: 7
+            }, this),
+            status
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/StatusBadge.tsx",
+        lineNumber: 6,
+        columnNumber: 5
+    }, this);
+}
+_c = StatusBadge;
+var _c;
+__turbopack_context__.k.register(_c, "StatusBadge");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/components/TopBar.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>TopBar
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+"use client";
+;
+function TopBar({ title, subtitle, action }) {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                        className: "text-lg font-semibold text-gray-900",
+                        children: title
+                    }, void 0, false, {
+                        fileName: "[project]/components/TopBar.tsx",
+                        lineNumber: 13,
+                        columnNumber: 9
+                    }, this),
+                    subtitle && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                        className: "text-sm text-gray-500 mt-0.5",
+                        children: subtitle
+                    }, void 0, false, {
+                        fileName: "[project]/components/TopBar.tsx",
+                        lineNumber: 14,
+                        columnNumber: 22
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/TopBar.tsx",
+                lineNumber: 12,
+                columnNumber: 7
+            }, this),
+            action && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                children: action
+            }, void 0, false, {
+                fileName: "[project]/components/TopBar.tsx",
+                lineNumber: 16,
+                columnNumber: 18
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/TopBar.tsx",
+        lineNumber: 11,
+        columnNumber: 5
+    }, this);
+}
+_c = TopBar;
+var _c;
+__turbopack_context__.k.register(_c, "TopBar");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/components/UploadModal.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>UploadModal
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/index.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ProcessingScreen$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/components/ProcessingScreen.tsx [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$mockRecords$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/data/mockRecords.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+"use client";
+;
+;
+;
+;
+const SAMPLE_FILES = Object.keys(__TURBOPACK__imported__module__$5b$project$5d2f$data$2f$mockRecords$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["sampleFileMapping"]);
+function UploadModal({ onClose }) {
+    _s();
+    const router = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"])();
+    const fileInputRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    const [selectedFile, setSelectedFile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
+    const [isDragging, setIsDragging] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const [processing, setProcessing] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
+    const handleFileSelect = (file)=>{
+        setSelectedFile(file.name);
+    };
+    const handleSampleSelect = (filename)=>{
+        setSelectedFile(filename);
+    };
+    const handleDrop = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "UploadModal.useCallback[handleDrop]": (e)=>{
+            e.preventDefault();
+            setIsDragging(false);
+            const file = e.dataTransfer.files[0];
+            if (file) handleFileSelect(file);
+        }
+    }["UploadModal.useCallback[handleDrop]"], []);
+    const handleDragOver = (e)=>{
+        e.preventDefault();
+        setIsDragging(true);
+    };
+    const handleDragLeave = ()=>setIsDragging(false);
+    const handleReview = ()=>{
+        if (!selectedFile) return;
+        setProcessing(true);
+    };
+    const handleProcessingComplete = ()=>{
+        // Map sample file to a record, or default to rec-001
+        const recordId = __TURBOPACK__imported__module__$5b$project$5d2f$data$2f$mockRecords$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["sampleFileMapping"][selectedFile] || "rec-001";
+        router.push(`/results/${recordId}`);
+        onClose();
+    };
+    if (processing) {
+        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$components$2f$ProcessingScreen$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+            filename: selectedFile,
+            onComplete: handleProcessingComplete
+        }, void 0, false, {
+            fileName: "[project]/components/UploadModal.tsx",
+            lineNumber: 57,
+            columnNumber: 12
+        }, this);
+    }
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "fixed inset-0 z-50 flex items-center justify-center",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "absolute inset-0 bg-gray-900/40 backdrop-blur-sm",
+                onClick: onClose
+            }, void 0, false, {
+                fileName: "[project]/components/UploadModal.tsx",
+                lineNumber: 63,
+                columnNumber: 7
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                className: "relative bg-white rounded-2xl shadow-2xl w-full max-w-lg mx-4 overflow-hidden",
+                children: [
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "px-6 py-5 border-b border-gray-100 flex items-center justify-between",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                        className: "text-base font-semibold text-gray-900",
+                                        children: "Upload Medical Document"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 73,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "text-xs text-gray-400 mt-0.5",
+                                        children: "Upload a document to begin AI-powered review"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 74,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/UploadModal.tsx",
+                                lineNumber: 72,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: onClose,
+                                className: "w-7 h-7 flex items-center justify-center rounded-lg hover:bg-gray-100 text-gray-400 hover:text-gray-600 transition-colors",
+                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                    className: "w-4 h-4",
+                                    fill: "none",
+                                    stroke: "currentColor",
+                                    viewBox: "0 0 24 24",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                        strokeLinecap: "round",
+                                        strokeLinejoin: "round",
+                                        strokeWidth: 2,
+                                        d: "M6 18L18 6M6 6l12 12"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 81,
+                                        columnNumber: 15
+                                    }, this)
+                                }, void 0, false, {
+                                    fileName: "[project]/components/UploadModal.tsx",
+                                    lineNumber: 80,
+                                    columnNumber: 13
+                                }, this)
+                            }, void 0, false, {
+                                fileName: "[project]/components/UploadModal.tsx",
+                                lineNumber: 76,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/UploadModal.tsx",
+                        lineNumber: 71,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "p-6 space-y-5",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                onDrop: handleDrop,
+                                onDragOver: handleDragOver,
+                                onDragLeave: handleDragLeave,
+                                onClick: ()=>fileInputRef.current?.click(),
+                                className: `relative border-2 border-dashed rounded-xl p-8 text-center cursor-pointer transition-all ${isDragging ? "border-blue-400 bg-blue-50" : selectedFile ? "border-green-400 bg-green-50" : "border-gray-200 hover:border-blue-300 hover:bg-gray-50"}`,
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
+                                        ref: fileInputRef,
+                                        type: "file",
+                                        accept: ".pdf,.doc,.docx,.txt",
+                                        className: "hidden",
+                                        onChange: (e)=>{
+                                            const f = e.target.files?.[0];
+                                            if (f) handleFileSelect(f);
+                                        }
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 101,
+                                        columnNumber: 13
+                                    }, this),
+                                    selectedFile ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "space-y-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mx-auto",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                    className: "w-5 h-5 text-green-600",
+                                                    fill: "none",
+                                                    stroke: "currentColor",
+                                                    viewBox: "0 0 24 24",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                        strokeLinecap: "round",
+                                                        strokeLinejoin: "round",
+                                                        strokeWidth: 2,
+                                                        d: "M5 13l4 4L19 7"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/UploadModal.tsx",
+                                                        lineNumber: 116,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/UploadModal.tsx",
+                                                    lineNumber: 115,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/UploadModal.tsx",
+                                                lineNumber: 114,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-sm font-medium text-green-800",
+                                                children: selectedFile
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/UploadModal.tsx",
+                                                lineNumber: 119,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xs text-green-600",
+                                                children: "File selected — click to change"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/UploadModal.tsx",
+                                                lineNumber: 120,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 113,
+                                        columnNumber: 15
+                                    }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "space-y-2",
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center mx-auto",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                    className: "w-5 h-5 text-gray-400",
+                                                    fill: "none",
+                                                    stroke: "currentColor",
+                                                    viewBox: "0 0 24 24",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                        strokeLinecap: "round",
+                                                        strokeLinejoin: "round",
+                                                        strokeWidth: 2,
+                                                        d: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/UploadModal.tsx",
+                                                        lineNumber: 126,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/UploadModal.tsx",
+                                                    lineNumber: 125,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/UploadModal.tsx",
+                                                lineNumber: 124,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-sm font-medium text-gray-700",
+                                                children: isDragging ? "Drop to upload" : "Drag & drop or click to select"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/UploadModal.tsx",
+                                                lineNumber: 130,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                className: "text-xs text-gray-400",
+                                                children: "PDF, DOC, DOCX, or TXT"
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/UploadModal.tsx",
+                                                lineNumber: 133,
+                                                columnNumber: 17
+                                            }, this)
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 123,
+                                        columnNumber: 15
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/UploadModal.tsx",
+                                lineNumber: 88,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "flex items-center gap-3",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex-1 h-px bg-gray-100"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 140,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                        className: "text-xs text-gray-400",
+                                        children: "or use a sample document"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 141,
+                                        columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                        className: "flex-1 h-px bg-gray-100"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 142,
+                                        columnNumber: 13
+                                    }, this)
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/UploadModal.tsx",
+                                lineNumber: 139,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "space-y-2",
+                                children: SAMPLE_FILES.map((file)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>handleSampleSelect(file),
+                                        className: `w-full flex items-center gap-3 px-4 py-3 rounded-lg border text-left transition-all ${selectedFile === file ? "border-blue-400 bg-blue-50" : "border-gray-200 hover:border-gray-300 hover:bg-gray-50"}`,
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "w-8 h-8 bg-red-100 rounded flex items-center justify-center shrink-0",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                    className: "w-4 h-4 text-red-500",
+                                                    fill: "currentColor",
+                                                    viewBox: "0 0 20 20",
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                        fillRule: "evenodd",
+                                                        d: "M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4z",
+                                                        clipRule: "evenodd"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/UploadModal.tsx",
+                                                        lineNumber: 159,
+                                                        columnNumber: 21
+                                                    }, this)
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/UploadModal.tsx",
+                                                    lineNumber: 158,
+                                                    columnNumber: 19
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/UploadModal.tsx",
+                                                lineNumber: 157,
+                                                columnNumber: 17
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                                className: "flex-1 min-w-0",
+                                                children: [
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-sm font-medium text-gray-800 truncate",
+                                                        children: file
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/UploadModal.tsx",
+                                                        lineNumber: 163,
+                                                        columnNumber: 19
+                                                    }, this),
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                                        className: "text-xs text-gray-400",
+                                                        children: "Sample document"
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/components/UploadModal.tsx",
+                                                        lineNumber: 164,
+                                                        columnNumber: 19
+                                                    }, this)
+                                                ]
+                                            }, void 0, true, {
+                                                fileName: "[project]/components/UploadModal.tsx",
+                                                lineNumber: 162,
+                                                columnNumber: 17
+                                            }, this),
+                                            selectedFile === file && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                                className: "w-4 h-4 text-blue-600 shrink-0",
+                                                fill: "none",
+                                                stroke: "currentColor",
+                                                viewBox: "0 0 24 24",
+                                                children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                                    strokeLinecap: "round",
+                                                    strokeLinejoin: "round",
+                                                    strokeWidth: 2.5,
+                                                    d: "M5 13l4 4L19 7"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/components/UploadModal.tsx",
+                                                    lineNumber: 168,
+                                                    columnNumber: 21
+                                                }, this)
+                                            }, void 0, false, {
+                                                fileName: "[project]/components/UploadModal.tsx",
+                                                lineNumber: 167,
+                                                columnNumber: 19
+                                            }, this)
+                                        ]
+                                    }, file, true, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 148,
+                                        columnNumber: 15
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/components/UploadModal.tsx",
+                                lineNumber: 146,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/UploadModal.tsx",
+                        lineNumber: 86,
+                        columnNumber: 9
+                    }, this),
+                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                        className: "px-6 py-4 border-t border-gray-100 flex items-center justify-between",
+                        children: [
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: onClose,
+                                className: "text-sm text-gray-500 hover:text-gray-700 font-medium",
+                                children: "Cancel"
+                            }, void 0, false, {
+                                fileName: "[project]/components/UploadModal.tsx",
+                                lineNumber: 178,
+                                columnNumber: 11
+                            }, this),
+                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                onClick: handleReview,
+                                disabled: !selectedFile,
+                                className: "flex items-center gap-2 bg-blue-600 hover:bg-blue-700 disabled:opacity-40 disabled:cursor-not-allowed text-white text-sm font-medium px-5 py-2 rounded-lg transition-colors",
+                                children: [
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
+                                        className: "w-4 h-4",
+                                        fill: "none",
+                                        stroke: "currentColor",
+                                        viewBox: "0 0 24 24",
+                                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("path", {
+                                            strokeLinecap: "round",
+                                            strokeLinejoin: "round",
+                                            strokeWidth: 2,
+                                            d: "M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                                        }, void 0, false, {
+                                            fileName: "[project]/components/UploadModal.tsx",
+                                            lineNumber: 187,
+                                            columnNumber: 15
+                                        }, this)
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/UploadModal.tsx",
+                                        lineNumber: 186,
+                                        columnNumber: 13
+                                    }, this),
+                                    "Review Document"
+                                ]
+                            }, void 0, true, {
+                                fileName: "[project]/components/UploadModal.tsx",
+                                lineNumber: 181,
+                                columnNumber: 11
+                            }, this)
+                        ]
+                    }, void 0, true, {
+                        fileName: "[project]/components/UploadModal.tsx",
+                        lineNumber: 177,
+                        columnNumber: 9
+                    }, this)
+                ]
+            }, void 0, true, {
+                fileName: "[project]/components/UploadModal.tsx",
+                lineNumber: 69,
+                columnNumber: 7
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/components/UploadModal.tsx",
+        lineNumber: 61,
+        columnNumber: 5
+    }, this);
+}
+_s(UploadModal, "FbnMRfd+kIV+0q+DCm7XKF2l6hU=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"]
+    ];
+});
+_c = UploadModal;
+var _c;
+__turbopack_context__.k.register(_c, "UploadModal");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+"[project]/data/mockRecords.ts [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "getRecord",
+    ()=>getRecord,
+    "getStatusColor",
+    ()=>getStatusColor,
+    "mockRecords",
+    ()=>mockRecords,
+    "sampleFileMapping",
+    ()=>sampleFileMapping
+]);
+const mockRecords = [
+    {
+        id: "rec-001",
+        patientName: "Eleanor Hartwell",
+        dateOfBirth: "1958-03-22",
+        documentType: "Primary Care Visit Note",
+        documentDate: "2024-11-14",
+        reviewedDate: "2024-11-15",
+        status: "Reviewed",
+        provider: "Dr. Marcus Whitfield",
+        facility: "Riverside Family Medicine",
+        sampleFile: "Sample — Primary Care Visit.pdf",
+        medications: [
+            {
+                name: "Lisinopril",
+                dosage: "10 mg",
+                frequency: "Once daily",
+                relevantText: "Patient continues Lisinopril 10 mg once daily for management of hypertension. BP measured at 138/86 today, improved from last visit.",
+                confidence: "High"
+            },
+            {
+                name: "Metformin",
+                dosage: "500 mg",
+                frequency: "Twice daily with meals",
+                relevantText: "Metformin 500 mg BID continued for Type 2 diabetes management. HbA1c 7.2%, slight improvement noted.",
+                confidence: "High"
+            },
+            {
+                name: "Atorvastatin",
+                dosage: "20 mg",
+                frequency: "Once daily at bedtime",
+                relevantText: "Atorvastatin 20 mg QHS for hyperlipidemia. Last lipid panel showed LDL 112 mg/dL.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Essential Hypertension",
+                icdCode: "I10",
+                relevantText: "Patient has a 9-year history of essential hypertension, currently managed with ACE inhibitor therapy.",
+                dateContext: "Ongoing — established 2015"
+            },
+            {
+                name: "Type 2 Diabetes Mellitus",
+                icdCode: "E11.9",
+                relevantText: "Type 2 diabetes diagnosed 2018. Patient adhering to dietary modifications and oral medication.",
+                dateContext: "Ongoing — established 2018"
+            },
+            {
+                name: "Hyperlipidemia",
+                icdCode: "E78.5",
+                relevantText: "Hyperlipidemia managed with statin therapy. Dietary counseling reinforced.",
+                dateContext: "Ongoing — established 2019"
+            }
+        ],
+        extractedText: `VISIT NOTE — November 14, 2024
+Patient: Eleanor Hartwell | DOB: 03/22/1958 | Provider: Dr. Marcus Whitfield
+
+Chief Complaint: Routine follow-up for hypertension and diabetes management.
+
+Subjective: Patient reports overall stable health. No chest pain, shortness of breath, or dizziness. Denies polyuria or polydipsia. Blood glucose home readings averaging 130-145 mg/dL fasting.
+
+Medications Reviewed:
+- Lisinopril 10 mg once daily for management of hypertension. BP measured at 138/86 today.
+- Metformin 500 mg BID continued for Type 2 diabetes management. HbA1c 7.2%.
+- Atorvastatin 20 mg QHS for hyperlipidemia. LDL 112 mg/dL on last lipid panel.
+
+Assessment and Plan:
+1. Essential Hypertension (I10) — Stable. Continue current regimen.
+2. Type 2 Diabetes Mellitus (E11.9) — Improving. HbA1c trending down.
+3. Hyperlipidemia (E78.5) — Continue statin. Repeat lipid panel in 6 months.
+
+Follow-up in 3 months or sooner if symptoms arise.`
+    },
+    {
+        id: "rec-002",
+        patientName: "Theodore Ngozi",
+        dateOfBirth: "1972-07-09",
+        documentType: "Cardiology Consultation",
+        documentDate: "2024-11-20",
+        reviewedDate: "2024-11-21",
+        status: "Reviewed",
+        provider: "Dr. Priya Sundaram",
+        facility: "St. Augustine Heart Institute",
+        medications: [
+            {
+                name: "Warfarin",
+                dosage: "5 mg",
+                frequency: "Once daily, dose adjusted per INR",
+                relevantText: "Warfarin 5 mg daily for anticoagulation in atrial fibrillation. INR target 2.0–3.0, current INR 2.4.",
+                confidence: "High"
+            },
+            {
+                name: "Metoprolol Succinate",
+                dosage: "50 mg",
+                frequency: "Once daily",
+                relevantText: "Metoprolol succinate 50 mg daily for rate control in atrial fibrillation. Resting HR 72 bpm.",
+                confidence: "High"
+            },
+            {
+                name: "Furosemide",
+                dosage: "40 mg",
+                frequency: "Once daily in the morning",
+                relevantText: "Furosemide 40 mg QAM for fluid management. Patient denies lower extremity edema.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Atrial Fibrillation, Persistent",
+                icdCode: "I48.11",
+                relevantText: "Patient diagnosed with persistent atrial fibrillation 2 years ago. Currently rate-controlled.",
+                dateContext: "Ongoing — diagnosed 2022"
+            },
+            {
+                name: "Congestive Heart Failure, Stable",
+                icdCode: "I50.9",
+                relevantText: "CHF with EF 40% on last echocardiogram. No acute decompensation at this time.",
+                dateContext: "Ongoing — established 2022"
+            }
+        ],
+        extractedText: `CARDIOLOGY CONSULTATION — November 20, 2024
+Patient: Theodore Ngozi | DOB: 07/09/1972
+
+Warfarin 5 mg daily — INR 2.4, within therapeutic range for atrial fibrillation anticoagulation.
+Metoprolol succinate 50 mg daily for rate control. Resting HR 72 bpm.
+Furosemide 40 mg QAM — fluid management, no current edema.
+
+Impression: Atrial fibrillation (I48.11) rate-controlled. CHF (I50.9) stable.`
+    },
+    {
+        id: "rec-003",
+        patientName: "Sandra Kowalczyk",
+        dateOfBirth: "1985-12-01",
+        documentType: "Pulmonology Follow-Up",
+        documentDate: "2024-11-18",
+        reviewedDate: "2024-11-19",
+        status: "Reviewed",
+        provider: "Dr. Leonard Osei",
+        facility: "Clearview Pulmonary Associates",
+        sampleFile: "Sample — Medication Review.pdf",
+        medications: [
+            {
+                name: "Fluticasone/Salmeterol",
+                dosage: "250/50 mcg",
+                frequency: "Two inhalations twice daily",
+                relevantText: "Fluticasone/Salmeterol 250/50 mcg — 2 puffs BID for persistent moderate asthma. Patient technique reassessed and corrected.",
+                confidence: "High"
+            },
+            {
+                name: "Albuterol",
+                dosage: "90 mcg",
+                frequency: "As needed, up to every 4 hours",
+                relevantText: "Albuterol 90 mcg MDI PRN for rescue therapy. Patient using approximately 3x weekly.",
+                confidence: "High"
+            },
+            {
+                name: "Montelukast",
+                dosage: "10 mg",
+                frequency: "Once daily at bedtime",
+                relevantText: "Montelukast 10 mg QHS added as adjunct therapy given suboptimal control.",
+                confidence: "Medium"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Moderate Persistent Asthma",
+                icdCode: "J45.40",
+                relevantText: "Moderate persistent asthma with partially controlled symptoms despite current ICS/LABA therapy.",
+                dateContext: "Ongoing — diagnosed 2010"
+            },
+            {
+                name: "Allergic Rhinitis",
+                icdCode: "J30.9",
+                relevantText: "Concurrent allergic rhinitis contributing to airway inflammation.",
+                dateContext: "Ongoing — established 2012"
+            }
+        ],
+        extractedText: `PULMONOLOGY FOLLOW-UP — November 18, 2024
+Patient: Sandra Kowalczyk | DOB: 12/01/1985
+
+Fluticasone/Salmeterol 250/50 mcg — 2 puffs BID. Technique reassessed.
+Albuterol 90 mcg PRN — patient using approx 3x weekly, above target.
+Montelukast 10 mg QHS added as adjunct therapy.
+
+Diagnoses: Moderate Persistent Asthma (J45.40), Allergic Rhinitis (J30.9).`
+    },
+    {
+        id: "rec-004",
+        patientName: "Reginald Ashby",
+        dateOfBirth: "1949-05-15",
+        documentType: "Discharge Summary",
+        documentDate: "2024-11-10",
+        reviewedDate: "2024-11-12",
+        status: "Reviewed",
+        provider: "Dr. Fatima Al-Hassan",
+        facility: "Northshore General Hospital",
+        medications: [
+            {
+                name: "Aspirin",
+                dosage: "81 mg",
+                frequency: "Once daily",
+                relevantText: "Aspirin 81 mg daily for secondary prevention post-MI. Continue indefinitely.",
+                confidence: "High"
+            },
+            {
+                name: "Clopidogrel",
+                dosage: "75 mg",
+                frequency: "Once daily",
+                relevantText: "Clopidogrel 75 mg daily — dual antiplatelet therapy following NSTEMI, continue for 12 months.",
+                confidence: "High"
+            },
+            {
+                name: "Atorvastatin",
+                dosage: "80 mg",
+                frequency: "Once daily at bedtime",
+                relevantText: "Atorvastatin 80 mg QHS — high-intensity statin therapy initiated post-cardiac event.",
+                confidence: "High"
+            },
+            {
+                name: "Lisinopril",
+                dosage: "5 mg",
+                frequency: "Once daily",
+                relevantText: "Lisinopril 5 mg daily — started post-MI for cardioprotection. Titrate up as tolerated.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Non-ST Elevation Myocardial Infarction",
+                icdCode: "I21.4",
+                relevantText: "Patient admitted with NSTEMI, troponin peak 4.2. PCI performed with drug-eluting stent to LAD.",
+                dateContext: "Acute event — November 8, 2024"
+            },
+            {
+                name: "Hypertension",
+                icdCode: "I10",
+                relevantText: "Background hypertension, now managed with ACE inhibitor post-MI.",
+                dateContext: "Ongoing — established 2005"
+            }
+        ],
+        extractedText: `DISCHARGE SUMMARY — November 10, 2024
+Patient: Reginald Ashby | DOB: 05/15/1949
+
+Discharge medications: Aspirin 81 mg, Clopidogrel 75 mg, Atorvastatin 80 mg, Lisinopril 5 mg.
+NSTEMI (I21.4) — PCI performed November 8, 2024. Drug-eluting stent to LAD.
+Hypertension (I10) — ACE inhibitor initiated.`
+    },
+    {
+        id: "rec-005",
+        patientName: "Miriam Castellanos",
+        dateOfBirth: "1993-09-30",
+        documentType: "Psychiatry Intake Assessment",
+        documentDate: "2024-11-22",
+        status: "Pending Review",
+        provider: "Dr. Yuki Tanaka",
+        facility: "Harmony Behavioral Health",
+        medications: [
+            {
+                name: "Sertraline",
+                dosage: "50 mg",
+                frequency: "Once daily in the morning",
+                relevantText: "Sertraline 50 mg QAM initiated for major depressive disorder, first episode. Counseled on onset of action.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Major Depressive Disorder, Single Episode",
+                icdCode: "F32.1",
+                relevantText: "Patient presenting with 6-week history of depressed mood, anhedonia, sleep disturbance, and fatigue meeting criteria for MDD.",
+                dateContext: "New diagnosis — November 2024"
+            },
+            {
+                name: "Generalized Anxiety Disorder",
+                icdCode: "F41.1",
+                relevantText: "Concurrent GAD symptoms noted. Sertraline may also address anxiety component.",
+                dateContext: "New diagnosis — November 2024"
+            }
+        ],
+        extractedText: `PSYCHIATRY INTAKE — November 22, 2024
+Patient: Miriam Castellanos | DOB: 09/30/1993
+
+Sertraline 50 mg QAM initiated — MDD first episode.
+Diagnoses: Major Depressive Disorder (F32.1), Generalized Anxiety Disorder (F41.1).`
+    },
+    {
+        id: "rec-006",
+        patientName: "Wallace Drummond",
+        dateOfBirth: "1962-02-14",
+        documentType: "Gastroenterology Visit",
+        documentDate: "2024-11-08",
+        reviewedDate: "2024-11-09",
+        status: "Reviewed",
+        provider: "Dr. Anjali Mehta",
+        facility: "Digestive Health Specialists",
+        medications: [
+            {
+                name: "Omeprazole",
+                dosage: "20 mg",
+                frequency: "Once daily before breakfast",
+                relevantText: "Omeprazole 20 mg daily before breakfast for GERD management. Patient reports significant symptom improvement.",
+                confidence: "High"
+            },
+            {
+                name: "Famotidine",
+                dosage: "20 mg",
+                frequency: "As needed at bedtime",
+                relevantText: "Famotidine 20 mg PRN at bedtime for breakthrough symptoms.",
+                confidence: "Medium"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Gastroesophageal Reflux Disease",
+                icdCode: "K21.0",
+                relevantText: "GERD with esophagitis on prior endoscopy. Currently well-controlled on PPI.",
+                dateContext: "Ongoing — diagnosed 2021"
+            }
+        ],
+        extractedText: `GASTROENTEROLOGY VISIT — November 8, 2024
+Patient: Wallace Drummond | DOB: 02/14/1962
+
+Omeprazole 20 mg daily — GERD well-controlled.
+Famotidine 20 mg PRN for breakthrough.
+GERD with esophagitis (K21.0).`
+    },
+    {
+        id: "rec-007",
+        patientName: "Henrietta Bloom",
+        dateOfBirth: "1957-11-27",
+        documentType: "Rheumatology Follow-Up",
+        documentDate: "2024-11-25",
+        status: "In Progress",
+        provider: "Dr. Carlos Vega",
+        facility: "Pacific Arthritis Center",
+        medications: [
+            {
+                name: "Methotrexate",
+                dosage: "15 mg",
+                frequency: "Once weekly",
+                relevantText: "Methotrexate 15 mg weekly for rheumatoid arthritis disease modification. Patient tolerating well with folic acid supplementation.",
+                confidence: "High"
+            },
+            {
+                name: "Folic Acid",
+                dosage: "1 mg",
+                frequency: "Once daily (6 days per week, not on MTX day)",
+                relevantText: "Folic acid 1 mg daily on non-methotrexate days to reduce side effects.",
+                confidence: "High"
+            },
+            {
+                name: "Prednisone",
+                dosage: "5 mg",
+                frequency: "Once daily (taper per plan)",
+                relevantText: "Prednisone 5 mg daily — bridge therapy during flare, tapering over 4 weeks.",
+                confidence: "High"
+            },
+            {
+                name: "Hydroxychloroquine",
+                dosage: "200 mg",
+                frequency: "Twice daily",
+                relevantText: "Hydroxychloroquine 200 mg BID continued as adjunct DMARD.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Rheumatoid Arthritis, Seropositive",
+                icdCode: "M05.79",
+                relevantText: "Seropositive RA with moderate disease activity. RF and anti-CCP positive. DAS28 score 4.2.",
+                dateContext: "Ongoing — established 2016"
+            }
+        ],
+        extractedText: `RHEUMATOLOGY FOLLOW-UP — November 25, 2024
+Patient: Henrietta Bloom | DOB: 11/27/1957
+
+Methotrexate 15 mg weekly — RA DMARD.
+Folic acid 1 mg daily (non-MTX days).
+Prednisone 5 mg — taper bridge.
+Hydroxychloroquine 200 mg BID.
+Rheumatoid Arthritis, Seropositive (M05.79), DAS28 4.2.`
+    },
+    {
+        id: "rec-008",
+        patientName: "Desmond Fairfax",
+        dateOfBirth: "1975-04-03",
+        documentType: "Annual Wellness Visit",
+        documentDate: "2024-11-05",
+        reviewedDate: "2024-11-06",
+        status: "Reviewed",
+        provider: "Dr. Simone Bouchard",
+        facility: "Lakewood Primary Care",
+        sampleFile: "Sample — Patient Summary.pdf",
+        medications: [
+            {
+                name: "Amlodipine",
+                dosage: "5 mg",
+                frequency: "Once daily",
+                relevantText: "Amlodipine 5 mg daily for hypertension. BP 132/82 at today's visit.",
+                confidence: "High"
+            },
+            {
+                name: "Metformin",
+                dosage: "1000 mg",
+                frequency: "Twice daily with meals",
+                relevantText: "Metformin 1000 mg BID — Type 2 diabetes, HbA1c 6.8%.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Hypertension",
+                icdCode: "I10",
+                relevantText: "Hypertension managed with calcium channel blocker.",
+                dateContext: "Ongoing — established 2020"
+            },
+            {
+                name: "Type 2 Diabetes Mellitus",
+                icdCode: "E11.9",
+                relevantText: "T2DM well-controlled. HbA1c 6.8%, at target.",
+                dateContext: "Ongoing — diagnosed 2020"
+            },
+            {
+                name: "Obesity, Class I",
+                icdCode: "E66.01",
+                relevantText: "BMI 32.4. Counseled on weight reduction. Referral to nutrition placed.",
+                dateContext: "Ongoing"
+            }
+        ],
+        extractedText: `ANNUAL WELLNESS VISIT — November 5, 2024
+Patient: Desmond Fairfax | DOB: 04/03/1975
+
+Amlodipine 5 mg daily — BP 132/82.
+Metformin 1000 mg BID — HbA1c 6.8%.
+Hypertension (I10), T2DM (E11.9), Obesity Class I (E66.01).`
+    },
+    {
+        id: "rec-009",
+        patientName: "Claudia Nwachukwu",
+        dateOfBirth: "1989-08-19",
+        documentType: "OB-GYN Prenatal Visit",
+        documentDate: "2024-11-16",
+        status: "Pending Review",
+        provider: "Dr. Rebecca Stern",
+        facility: "Women's Health Alliance",
+        medications: [
+            {
+                name: "Prenatal Vitamins",
+                dosage: "1 tablet",
+                frequency: "Once daily",
+                relevantText: "Prenatal multivitamin with folic acid 800 mcg daily. Patient compliant.",
+                confidence: "High"
+            },
+            {
+                name: "Labetalol",
+                dosage: "100 mg",
+                frequency: "Twice daily",
+                relevantText: "Labetalol 100 mg BID initiated for gestational hypertension. BP trending down.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Gestational Hypertension",
+                icdCode: "O13.9",
+                relevantText: "Gestational hypertension diagnosed at 28 weeks. Monitoring weekly.",
+                dateContext: "Current pregnancy — 28 weeks"
+            },
+            {
+                name: "Intrauterine Pregnancy, 28 Weeks",
+                icdCode: "Z34.28",
+                relevantText: "Fetal growth appropriate for gestational age. AFIS normal.",
+                dateContext: "Current"
+            }
+        ],
+        extractedText: `PRENATAL VISIT — November 16, 2024
+Patient: Claudia Nwachukwu | DOB: 08/19/1989 | GA: 28 weeks
+
+Prenatal vitamins daily — compliant.
+Labetalol 100 mg BID — gestational hypertension.
+Gestational Hypertension (O13.9), IUP 28 weeks (Z34.28).`
+    },
+    {
+        id: "rec-010",
+        patientName: "Frederick Hartmann",
+        dateOfBirth: "1944-01-30",
+        documentType: "Neurology Consultation",
+        documentDate: "2024-11-13",
+        reviewedDate: "2024-11-14",
+        status: "Reviewed",
+        provider: "Dr. Ingrid Petrov",
+        facility: "Coastal Neurology Associates",
+        medications: [
+            {
+                name: "Rivastigmine",
+                dosage: "4.6 mg/24hr",
+                frequency: "Transdermal patch, changed daily",
+                relevantText: "Rivastigmine transdermal 4.6 mg/24hr patch applied daily for Alzheimer's disease management.",
+                confidence: "High"
+            },
+            {
+                name: "Memantine",
+                dosage: "10 mg",
+                frequency: "Twice daily",
+                relevantText: "Memantine 10 mg BID combined with cholinesterase inhibitor for moderate Alzheimer's.",
+                confidence: "High"
+            },
+            {
+                name: "Donepezil",
+                dosage: "10 mg",
+                frequency: "Once daily at bedtime",
+                relevantText: "Donepezil 10 mg QHS — note: review for potential overlap with rivastigmine.",
+                confidence: "Low"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Alzheimer's Disease, Moderate",
+                icdCode: "G30.9",
+                relevantText: "Moderate Alzheimer's disease. MMSE score 17/30. Caregiver present at visit.",
+                dateContext: "Ongoing — diagnosed 2021"
+            }
+        ],
+        extractedText: `NEUROLOGY CONSULTATION — November 13, 2024
+Patient: Frederick Hartmann | DOB: 01/30/1944
+
+Rivastigmine patch 4.6 mg/24hr — daily.
+Memantine 10 mg BID.
+Donepezil 10 mg QHS — potential overlap flagged.
+Alzheimer's Disease, Moderate (G30.9). MMSE 17/30.`
+    },
+    {
+        id: "rec-011",
+        patientName: "Patricia Okonkwo",
+        dateOfBirth: "1968-06-12",
+        documentType: "Endocrinology Follow-Up",
+        documentDate: "2024-11-19",
+        status: "Flagged",
+        provider: "Dr. Samuel Levi",
+        facility: "Metro Diabetes & Endocrine Center",
+        medications: [
+            {
+                name: "Insulin Glargine",
+                dosage: "22 units",
+                frequency: "Once daily at bedtime",
+                relevantText: "Insulin glargine 22 units subcutaneous QHS. Titrate by 2 units every 3 days if fasting glucose >130.",
+                confidence: "High"
+            },
+            {
+                name: "Insulin Lispro",
+                dosage: "6 units",
+                frequency: "Three times daily with meals",
+                relevantText: "Insulin lispro 6 units TID before meals — correction scale provided.",
+                confidence: "High"
+            },
+            {
+                name: "Metformin",
+                dosage: "1000 mg",
+                frequency: "Twice daily",
+                relevantText: "Metformin 1000 mg BID continued as adjunct to insulin therapy.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Type 1 Diabetes Mellitus",
+                icdCode: "E10.65",
+                relevantText: "T1DM, inadequate glycemic control. HbA1c 9.1%, above target. Insulin regimen intensified.",
+                dateContext: "Ongoing — established 1990"
+            },
+            {
+                name: "Diabetic Peripheral Neuropathy",
+                icdCode: "E10.40",
+                relevantText: "Bilateral lower extremity neuropathy. Monofilament exam reduced sensation bilateral feet.",
+                dateContext: "Ongoing — established 2022"
+            }
+        ],
+        extractedText: `ENDOCRINOLOGY FOLLOW-UP — November 19, 2024
+Patient: Patricia Okonkwo | DOB: 06/12/1968
+
+Insulin glargine 22 units QHS — T1DM.
+Insulin lispro 6 units TID.
+Metformin 1000 mg BID.
+T1DM (E10.65) HbA1c 9.1% — FLAGGED: above target, regimen intensified.
+Diabetic Peripheral Neuropathy (E10.40).`
+    },
+    {
+        id: "rec-012",
+        patientName: "Arnold Szymanski",
+        dateOfBirth: "1955-10-08",
+        documentType: "Nephrology Visit",
+        documentDate: "2024-11-07",
+        reviewedDate: "2024-11-08",
+        status: "Reviewed",
+        provider: "Dr. Diana Obi",
+        facility: "Renal Health Partners",
+        medications: [
+            {
+                name: "Amlodipine",
+                dosage: "10 mg",
+                frequency: "Once daily",
+                relevantText: "Amlodipine 10 mg daily — HTN management in CKD context. Preferred agent given eGFR.",
+                confidence: "High"
+            },
+            {
+                name: "Erythropoietin-stimulating Agent",
+                dosage: "Per protocol",
+                frequency: "Subcutaneous injection 3x weekly",
+                relevantText: "ESA therapy for CKD-associated anemia. Target hemoglobin 10–11 g/dL.",
+                confidence: "Medium"
+            },
+            {
+                name: "Sevelamer",
+                dosage: "800 mg",
+                frequency: "Three times daily with meals",
+                relevantText: "Sevelamer 800 mg TID with meals — phosphate binder for CKD mineral metabolism.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Chronic Kidney Disease, Stage 4",
+                icdCode: "N18.4",
+                relevantText: "CKD Stage 4 — eGFR 22 mL/min/1.73m². Discussing preparation for renal replacement therapy.",
+                dateContext: "Ongoing — established 2019"
+            },
+            {
+                name: "Anemia of Chronic Disease",
+                icdCode: "D63.1",
+                relevantText: "Normocytic anemia secondary to CKD. Hgb 9.8 g/dL.",
+                dateContext: "Ongoing"
+            }
+        ],
+        extractedText: `NEPHROLOGY VISIT — November 7, 2024
+Patient: Arnold Szymanski | DOB: 10/08/1955
+
+Amlodipine 10 mg daily.
+ESA therapy 3x weekly — anemia management.
+Sevelamer 800 mg TID — phosphate binder.
+CKD Stage 4 (N18.4), eGFR 22. Anemia of CKD (D63.1).`
+    },
+    {
+        id: "rec-013",
+        patientName: "Loretta Chukwuemeka",
+        dateOfBirth: "1980-03-17",
+        documentType: "Urgent Care Visit",
+        documentDate: "2024-11-26",
+        status: "Pending Review",
+        provider: "Dr. James Holloway",
+        facility: "MedFast Urgent Care",
+        medications: [
+            {
+                name: "Azithromycin",
+                dosage: "500 mg",
+                frequency: "Once daily for 5 days",
+                relevantText: "Azithromycin Z-pack prescribed for community-acquired pneumonia, outpatient management.",
+                confidence: "High"
+            },
+            {
+                name: "Guaifenesin",
+                dosage: "600 mg",
+                frequency: "Every 12 hours",
+                relevantText: "Guaifenesin 600 mg ER BID for productive cough.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Community-Acquired Pneumonia",
+                icdCode: "J18.9",
+                relevantText: "Right lower lobe infiltrate on chest X-ray consistent with CAP. Afebrile, SpO2 97%.",
+                dateContext: "Acute — November 26, 2024"
+            }
+        ],
+        extractedText: `URGENT CARE VISIT — November 26, 2024
+Patient: Loretta Chukwuemeka | DOB: 03/17/1980
+
+Azithromycin 500 mg daily x5 days — CAP.
+Guaifenesin 600 mg ER BID.
+Community-Acquired Pneumonia (J18.9).`
+    },
+    {
+        id: "rec-014",
+        patientName: "Benjamin Afolabi",
+        dateOfBirth: "1990-07-24",
+        documentType: "Sports Medicine Consultation",
+        documentDate: "2024-11-21",
+        status: "In Progress",
+        provider: "Dr. Kaitlyn Rhodes",
+        facility: "Advanced Sports Medicine Clinic",
+        medications: [
+            {
+                name: "Naproxen",
+                dosage: "500 mg",
+                frequency: "Twice daily with food",
+                relevantText: "Naproxen 500 mg BID with food for inflammation and pain management. Short course, 2 weeks.",
+                confidence: "High"
+            },
+            {
+                name: "Cyclobenzaprine",
+                dosage: "5 mg",
+                frequency: "Three times daily as needed",
+                relevantText: "Cyclobenzaprine 5 mg TID PRN for muscle spasm associated with injury.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Medial Collateral Ligament Sprain, Grade II",
+                icdCode: "S83.412A",
+                relevantText: "Grade II MCL sprain of right knee from soccer injury. MRI confirmed without complete tear.",
+                dateContext: "Acute — November 18, 2024"
+            }
+        ],
+        extractedText: `SPORTS MEDICINE — November 21, 2024
+Patient: Benjamin Afolabi | DOB: 07/24/1990
+
+Naproxen 500 mg BID — 2 week course.
+Cyclobenzaprine 5 mg TID PRN.
+Grade II MCL Sprain, right knee (S83.412A) — MRI confirmed.`
+    },
+    {
+        id: "rec-015",
+        patientName: "Vivienne Tremblay",
+        dateOfBirth: "1953-09-03",
+        documentType: "Oncology Follow-Up",
+        documentDate: "2024-11-04",
+        reviewedDate: "2024-11-05",
+        status: "Reviewed",
+        provider: "Dr. Michael Okafor",
+        facility: "Regional Cancer Institute",
+        medications: [
+            {
+                name: "Anastrozole",
+                dosage: "1 mg",
+                frequency: "Once daily",
+                relevantText: "Anastrozole 1 mg daily — adjuvant aromatase inhibitor therapy for ER+ breast cancer.",
+                confidence: "High"
+            },
+            {
+                name: "Zoledronic Acid",
+                dosage: "4 mg IV",
+                frequency: "Every 6 months",
+                relevantText: "Zoledronic acid 4 mg IV infusion every 6 months for bone density protection during hormonal therapy.",
+                confidence: "High"
+            },
+            {
+                name: "Ondansetron",
+                dosage: "8 mg",
+                frequency: "As needed for nausea",
+                relevantText: "Ondansetron 8 mg PRN nausea — residual chemotherapy-related symptom management.",
+                confidence: "Medium"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Breast Cancer, ER+, Stage II, Remission",
+                icdCode: "Z85.3",
+                relevantText: "Breast cancer ER+ Stage IIA, currently in remission after surgery and chemotherapy. On adjuvant endocrine therapy.",
+                dateContext: "Remission — completed treatment 2023"
+            },
+            {
+                name: "Osteoporosis",
+                icdCode: "M81.0",
+                relevantText: "Osteoporosis secondary to aromatase inhibitor use. DEXA T-score -2.8.",
+                dateContext: "Ongoing — diagnosed 2024"
+            }
+        ],
+        extractedText: `ONCOLOGY FOLLOW-UP — November 4, 2024
+Patient: Vivienne Tremblay | DOB: 09/03/1953
+
+Anastrozole 1 mg daily — ER+ breast cancer adjuvant.
+Zoledronic acid 4 mg IV q6 months — bone protection.
+Ondansetron 8 mg PRN.
+Breast Cancer ER+ Stage IIA (Z85.3) — remission. Osteoporosis (M81.0).`
+    },
+    {
+        id: "rec-016",
+        patientName: "Howard Nkemdirim",
+        dateOfBirth: "1978-11-16",
+        documentType: "Sleep Medicine Evaluation",
+        documentDate: "2024-11-27",
+        status: "Pending Review",
+        provider: "Dr. Christine Yamamoto",
+        facility: "Sleep Wellness Center",
+        medications: [
+            {
+                name: "CPAP Therapy",
+                dosage: "Auto-titrating 8–14 cmH2O",
+                frequency: "Nightly",
+                relevantText: "Auto-CPAP 8–14 cmH2O initiated for obstructive sleep apnea. AHI 28 at diagnostic study.",
+                confidence: "High"
+            },
+            {
+                name: "Melatonin",
+                dosage: "5 mg",
+                frequency: "Once nightly 30 minutes before sleep",
+                relevantText: "Melatonin 5 mg nightly for sleep onset support during CPAP adjustment period.",
+                confidence: "Medium"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Obstructive Sleep Apnea, Moderate",
+                icdCode: "G47.33",
+                relevantText: "Moderate OSA on polysomnography. AHI 28/hr. CPAP prescribed and titrated.",
+                dateContext: "New diagnosis — November 2024"
+            }
+        ],
+        extractedText: `SLEEP MEDICINE EVALUATION — November 27, 2024
+Patient: Howard Nkemdirim | DOB: 11/16/1978
+
+Auto-CPAP 8–14 cmH2O nightly — OSA.
+Melatonin 5 mg nightly.
+Moderate OSA (G47.33), AHI 28.`
+    },
+    {
+        id: "rec-017",
+        patientName: "Ingrid Solberg",
+        dateOfBirth: "1961-04-07",
+        documentType: "Dermatology Follow-Up",
+        documentDate: "2024-11-11",
+        reviewedDate: "2024-11-12",
+        status: "Reviewed",
+        provider: "Dr. Amara Diallo",
+        facility: "SkinCare Specialists Group",
+        medications: [
+            {
+                name: "Adalimumab",
+                dosage: "40 mg",
+                frequency: "Subcutaneous injection every 2 weeks",
+                relevantText: "Adalimumab 40 mg SQ biweekly — biologic therapy for moderate-to-severe plaque psoriasis.",
+                confidence: "High"
+            },
+            {
+                name: "Clobetasol Propionate",
+                dosage: "0.05% cream",
+                frequency: "Twice daily for up to 2 weeks",
+                relevantText: "Clobetasol 0.05% cream BID for active plaque lesions on bilateral elbows.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Plaque Psoriasis, Moderate-Severe",
+                icdCode: "L40.0",
+                relevantText: "Moderate-to-severe plaque psoriasis BSA 18%. PASI score 14. On biologic therapy.",
+                dateContext: "Ongoing — established 2015"
+            },
+            {
+                name: "Psoriatic Arthritis",
+                icdCode: "L40.52",
+                relevantText: "Psoriatic arthritis affecting DIP joints bilateral hands. Adalimumab addressing both conditions.",
+                dateContext: "Ongoing — established 2018"
+            }
+        ],
+        extractedText: `DERMATOLOGY FOLLOW-UP — November 11, 2024
+Patient: Ingrid Solberg | DOB: 04/07/1961
+
+Adalimumab 40 mg SQ q2 weeks — psoriasis + PsA.
+Clobetasol 0.05% cream BID (bilateral elbows).
+Plaque Psoriasis (L40.0) BSA 18%. Psoriatic Arthritis (L40.52).`
+    },
+    {
+        id: "rec-018",
+        patientName: "Gerald Mbeki",
+        dateOfBirth: "1987-12-29",
+        documentType: "Emergency Department Visit",
+        documentDate: "2024-11-23",
+        reviewedDate: "2024-11-24",
+        status: "Reviewed",
+        provider: "Dr. Lisa Fontaine",
+        facility: "Downtown Emergency Medical Center",
+        medications: [
+            {
+                name: "Acetaminophen",
+                dosage: "1000 mg IV",
+                frequency: "Every 6 hours as needed",
+                relevantText: "Acetaminophen 1g IV q6h PRN pain in ED setting.",
+                confidence: "High"
+            },
+            {
+                name: "Ketorolac",
+                dosage: "15 mg IV",
+                frequency: "Once, with follow-up oral transition",
+                relevantText: "Ketorolac 15 mg IV for acute renal colic pain management.",
+                confidence: "High"
+            },
+            {
+                name: "Tamsulosin",
+                dosage: "0.4 mg",
+                frequency: "Once daily at bedtime",
+                relevantText: "Tamsulosin 0.4 mg QHS prescribed at discharge for ureteral stone expulsion therapy.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Nephrolithiasis (Ureteral Stone)",
+                icdCode: "N20.1",
+                relevantText: "Right ureteral stone 4mm on CT. Severe colicky flank pain at presentation.",
+                dateContext: "Acute — November 23, 2024"
+            }
+        ],
+        extractedText: `EMERGENCY DEPARTMENT — November 23, 2024
+Patient: Gerald Mbeki | DOB: 12/29/1987
+
+Acetaminophen 1g IV q6h PRN.
+Ketorolac 15 mg IV — acute pain.
+Tamsulosin 0.4 mg QHS — discharge (expulsion therapy).
+Nephrolithiasis, ureteral stone 4mm (N20.1).`
+    },
+    {
+        id: "rec-019",
+        patientName: "Doris Whitehurst",
+        dateOfBirth: "1948-08-11",
+        documentType: "Geriatrics Assessment",
+        documentDate: "2024-11-03",
+        reviewedDate: "2024-11-04",
+        status: "Reviewed",
+        provider: "Dr. Nathan Goldberg",
+        facility: "Senior Health Medical Group",
+        medications: [
+            {
+                name: "Levothyroxine",
+                dosage: "75 mcg",
+                frequency: "Once daily on empty stomach",
+                relevantText: "Levothyroxine 75 mcg daily on empty stomach for hypothyroidism. TSH 2.1 on last labs.",
+                confidence: "High"
+            },
+            {
+                name: "Calcium Carbonate",
+                dosage: "500 mg",
+                frequency: "Twice daily with food",
+                relevantText: "Calcium carbonate 500 mg BID with meals for osteoporosis supplementation.",
+                confidence: "High"
+            },
+            {
+                name: "Vitamin D3",
+                dosage: "2000 IU",
+                frequency: "Once daily",
+                relevantText: "Vitamin D3 2000 IU daily — 25-OH vitamin D 28 ng/mL, supplementing to target >30.",
+                confidence: "High"
+            },
+            {
+                name: "Alendronate",
+                dosage: "70 mg",
+                frequency: "Once weekly on empty stomach",
+                relevantText: "Alendronate 70 mg weekly for osteoporosis treatment. DEXA T-score -2.6.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Hypothyroidism",
+                icdCode: "E03.9",
+                relevantText: "Primary hypothyroidism, stable on levothyroxine. TSH 2.1 mIU/L.",
+                dateContext: "Ongoing — established 2008"
+            },
+            {
+                name: "Osteoporosis",
+                icdCode: "M81.0",
+                relevantText: "Postmenopausal osteoporosis. DEXA T-score -2.6 lumbar spine.",
+                dateContext: "Ongoing — established 2016"
+            }
+        ],
+        extractedText: `GERIATRICS ASSESSMENT — November 3, 2024
+Patient: Doris Whitehurst | DOB: 08/11/1948
+
+Levothyroxine 75 mcg daily — TSH 2.1.
+Calcium carbonate 500 mg BID.
+Vitamin D3 2000 IU daily.
+Alendronate 70 mg weekly.
+Hypothyroidism (E03.9), Osteoporosis (M81.0).`
+    },
+    {
+        id: "rec-020",
+        patientName: "Xavier Fontaine",
+        dateOfBirth: "1970-02-28",
+        documentType: "Urology Follow-Up",
+        documentDate: "2024-11-06",
+        reviewedDate: "2024-11-07",
+        status: "Reviewed",
+        provider: "Dr. Olumide Adeyemi",
+        facility: "Urology Specialists of the South",
+        medications: [
+            {
+                name: "Finasteride",
+                dosage: "5 mg",
+                frequency: "Once daily",
+                relevantText: "Finasteride 5 mg daily — 5-alpha reductase inhibitor for BPH and prostate volume reduction.",
+                confidence: "High"
+            },
+            {
+                name: "Tamsulosin",
+                dosage: "0.4 mg",
+                frequency: "Once daily at bedtime",
+                relevantText: "Tamsulosin 0.4 mg QHS for alpha-blockade in BPH. IPSS improved from 18 to 11.",
+                confidence: "High"
+            }
+        ],
+        diagnoses: [
+            {
+                name: "Benign Prostatic Hyperplasia",
+                icdCode: "N40.1",
+                relevantText: "BPH with lower urinary tract symptoms. IPSS score 11. Prostate volume 48cc on TRUS.",
+                dateContext: "Ongoing — diagnosed 2022"
+            }
+        ],
+        extractedText: `UROLOGY FOLLOW-UP — November 6, 2024
+Patient: Xavier Fontaine | DOB: 02/28/1970
+
+Finasteride 5 mg daily — BPH.
+Tamsulosin 0.4 mg QHS — IPSS 11.
+Benign Prostatic Hyperplasia (N40.1), prostate 48cc.`
+    }
+];
+const sampleFileMapping = {
+    "Sample — Primary Care Visit.pdf": "rec-001",
+    "Sample — Medication Review.pdf": "rec-003",
+    "Sample — Patient Summary.pdf": "rec-008"
+};
+const getRecord = (id)=>mockRecords.find((r)=>r.id === id);
+const getStatusColor = (status)=>{
+    switch(status){
+        case "Reviewed":
+            return {
+                bg: "bg-green-50",
+                text: "text-green-700",
+                dot: "bg-green-500"
+            };
+        case "Pending Review":
+            return {
+                bg: "bg-amber-50",
+                text: "text-amber-700",
+                dot: "bg-amber-500"
+            };
+        case "In Progress":
+            return {
+                bg: "bg-blue-50",
+                text: "text-blue-700",
+                dot: "bg-blue-500"
+            };
+        case "Flagged":
+            return {
+                bg: "bg-red-50",
+                text: "text-red-700",
+                dot: "bg-red-500"
+            };
+    }
+};
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+]);
+
+//# sourceMappingURL=_1153gsh._.js.map

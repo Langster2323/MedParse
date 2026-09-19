@@ -1,0 +1,26 @@
+1:"$Sreact.fragment"
+2:I[47257,["/_next/static/chunks/3fntmmi971322.js"],"ClientPageRoot"]
+3:I[1308,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/3hiu3ewpq7gj_.js","/_next/static/chunks/1to-ixklrnz32.js"],"default"]
+6:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"OutletBoundary"]
+7:"$Sreact.suspense"
+b:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"ViewportBoundary"]
+c:I[97367,["/_next/static/chunks/3fntmmi971322.js"],"MetadataBoundary"]
+e:I[39756,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+f:I[37457,["/_next/static/chunks/3fntmmi971322.js"],"default"]
+12:I[22016,["/_next/static/chunks/3fntmmi971322.js","/_next/static/chunks/22i43cg4l4-dq.js"],""]
+:HL["/_next/static/chunks/2_p82rfquk7y2.css","style"]
+a:X
+11:X
+11:C
+0:{"buildId":"ohE94PvcMGLeqrUZQqiS9","data":[{"rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/_next/static/chunks/3hiu3ewpq7gj_.js","async":true}],["$","script","script-1",{"src":"/_next/static/chunks/1to-ixklrnz32.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"isPartial":"$@9","staleTime":"$a","varyParams":null},{"rsc":["$","$1","h",{"children":[null,["$","$Lb",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]}],["$","div",null,{"hidden":true,"children":["$","$Lc",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"MedParse — Medical Document Review"}],["$","meta","1",{"name":"description","content":"AI-powered medical document review and extraction"}]]}]}]}],null]}],"isPartial":"$@d","staleTime":"$a","varyParams":null},{"rsc":["$","$1","c",{"children":[null,["$","$Le",null,{"parallelRouterKey":"children","template":["$","$Lf",null,{}]}]]}],"isPartial":"$@10","staleTime":"$a","varyParams":"$11"},{"rsc":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/2_p82rfquk7y2.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/3fntmmi971322.js","async":true}]],["$","html",null,{"lang":"en","children":["$","body",null,{"className":"bg-gray-50 text-gray-900","children":["$","$Le",null,{"parallelRouterKey":"children","template":["$","$Lf",null,{}],"notFound":[["$","div",null,{"className":"min-h-screen bg-gray-50 flex items-center justify-center","children":["$","div",null,{"className":"text-center","children":[["$","div",null,{"className":"w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4","children":["$","svg",null,{"className":"w-8 h-8 text-blue-600","fill":"none","stroke":"currentColor","viewBox":"0 0 24 24","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"}]}]}],["$","h1",null,{"className":"text-2xl font-bold text-gray-900","children":"Page not found"}],["$","p",null,{"className":"text-gray-500 mt-2 mb-6","children":"This page doesn't exist or has been moved."}],["$","$L12",null,{"href":"/","className":"inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors","children":"← Back to Dashboard"}]]}]}],[]]}]}]}]]}],"isPartial":"$@13","staleTime":"$a","varyParams":null}],"isUpgradeableISRFallback":false,"a":"$@14","rootVaryParams":null,"needsRuntimeRequest":"$@15"}
+4:{}
+5:"$0:data:0:rsc:props:children:0:props:serverProvidedParams:params"
+8:null
+a:300
+15:true
+a:C
+14:0
+d:"$undefined"
+10:"$undefined"
+13:"$undefined"
+9:"$undefined"
