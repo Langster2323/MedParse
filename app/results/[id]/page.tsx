@@ -1,24 +1,34 @@
 "use client";
 
+import { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import AppShell from "@/components/AppShell";
 import TopBar from "@/components/TopBar";
 import StatusBadge from "@/components/StatusBadge";
 import DownloadButton from "@/components/DownloadButton";
-import { getRecord } from "@/data/mockRecords";
+import DocumentViewer from "@/components/DocumentViewer";
+import EditableMedicationsTable from "@/components/EditableMedicationsTable";
+import EditableDiagnosisList from "@/components/EditableDiagnosisList";
+import { getRecord, Medication, Diagnosis } from "@/data/mockRecords";
 
-const confidenceColor = (c: string) => {
-  if (c === "High") return "text-green-700 bg-green-50";
-  if (c === "Medium") return "text-amber-700 bg-amber-50";
-  return "text-red-700 bg-red-50";
-};
+type ViewMode = "extracted" | "document";
 
 export default function ResultsDetailPage() {
   const { id } = useParams<{ id: string }>();
   const router = useRouter();
-  const record = getRecord(id);
+  const baseRecord = getRecord(id);
 
-  if (!record) {
+  // Local editable state — no DB needed, session-only
+  const [medications, setMedications] = useState<Medication[]>(
+    baseRecord?.medications ?? []
+  );
+  const [diagnoses, setDiagnoses] = useState<Diagnosis[]>(
+    baseRecord?.diagnoses ?? []
+  );
+  const [viewMode, setViewMode] = useState<ViewMode>("extracted");
+  const [editMode, setEditMode] = useState(false);
+
+  if (!baseRecord) {
     return (
       <AppShell>
         <TopBar title="Record Not Found" />
@@ -34,11 +44,19 @@ export default function ResultsDetailPage() {
     );
   }
 
+  // Compose a record with the current (possibly edited) data for downloads
+  const currentRecord = { ...baseRecord, medications, diagnoses };
+
+  const highConfCount = medications.filter((m) => m.confidence === "High").length;
+  const confidencePct = medications.length > 0
+    ? Math.round((highConfCount / medications.length) * 100)
+    : 100;
+
   return (
     <AppShell>
       <TopBar
         title="Review Results"
-        subtitle={`${record.patientName} — ${record.documentType}`}
+        subtitle={`${baseRecord.patientName} — ${baseRecord.documentType}`}
         action={
           <div className="flex items-center gap-3">
             <button
@@ -47,7 +65,7 @@ export default function ResultsDetailPage() {
             >
               ← Back
             </button>
-            <DownloadButton record={record} />
+            <DownloadButton record={currentRecord} />
           </div>
         }
       />
@@ -59,23 +77,23 @@ export default function ResultsDetailPage() {
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
                 <span className="text-lg font-bold text-blue-700">
-                  {record.patientName.split(" ").map((n) => n[0]).join("").slice(0, 2)}
+                  {baseRecord.patientName.split(" ").map((n) => n[0]).join("").slice(0, 2)}
                 </span>
               </div>
               <div>
-                <h2 className="text-lg font-semibold text-gray-900">{record.patientName}</h2>
-                <p className="text-sm text-gray-500">Date of Birth: {record.dateOfBirth}</p>
+                <h2 className="text-lg font-semibold text-gray-900">{baseRecord.patientName}</h2>
+                <p className="text-sm text-gray-500">Date of Birth: {baseRecord.dateOfBirth}</p>
               </div>
             </div>
-            <StatusBadge status={record.status} />
+            <StatusBadge status={baseRecord.status} />
           </div>
 
           <div className="mt-5 grid grid-cols-4 gap-4 pt-5 border-t border-gray-100">
             {[
-              { label: "Document Type", value: record.documentType },
-              { label: "Document Date", value: record.documentDate },
-              { label: "Provider", value: record.provider },
-              { label: "Facility", value: record.facility },
+              { label: "Document Type", value: baseRecord.documentType },
+              { label: "Document Date", value: baseRecord.documentDate },
+              { label: "Provider", value: baseRecord.provider },
+              { label: "Facility", value: baseRecord.facility },
             ].map((item) => (
               <div key={item.label}>
                 <p className="text-xs text-gray-400 uppercase tracking-wide font-medium">{item.label}</p>
@@ -86,127 +104,151 @@ export default function ResultsDetailPage() {
 
           <div className="mt-4 grid grid-cols-3 gap-4 pt-4 border-t border-gray-100">
             <div className="bg-green-50 rounded-lg p-3 text-center">
-              <p className="text-2xl font-bold text-green-700">{record.medications.length}</p>
+              <p className="text-2xl font-bold text-green-700">{medications.length}</p>
               <p className="text-xs text-green-600 mt-0.5">Medications Identified</p>
             </div>
             <div className="bg-blue-50 rounded-lg p-3 text-center">
-              <p className="text-2xl font-bold text-blue-700">{record.diagnoses.length}</p>
+              <p className="text-2xl font-bold text-blue-700">{diagnoses.length}</p>
               <p className="text-xs text-blue-600 mt-0.5">Diagnoses Identified</p>
             </div>
             <div className="bg-purple-50 rounded-lg p-3 text-center">
-              <p className="text-2xl font-bold text-purple-700">
-                {Math.round((record.medications.filter((m) => m.confidence === "High").length / record.medications.length) * 100) || 100}%
-              </p>
+              <p className="text-2xl font-bold text-purple-700">{confidencePct}%</p>
               <p className="text-xs text-purple-600 mt-0.5">High Confidence Extractions</p>
             </div>
           </div>
         </div>
 
-        {/* Medications */}
-        <div className="bg-white rounded-xl border border-gray-200">
-          <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-2">
-            <div className="w-5 h-5 rounded bg-green-100 flex items-center justify-center">
-              <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4" />
+        {/* View toggle + Edit mode controls */}
+        <div className="flex items-center justify-between">
+          {/* View switcher */}
+          <div className="flex items-center bg-white border border-gray-200 rounded-lg p-1 gap-1">
+            <button
+              onClick={() => setViewMode("extracted")}
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                viewMode === "extracted"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
               </svg>
-            </div>
-            <h3 className="text-sm font-semibold text-gray-900">Identified Medications</h3>
-            <span className="ml-auto text-xs text-gray-400">{record.medications.length} found</span>
+              Extracted Data
+            </button>
+            <button
+              onClick={() => setViewMode("document")}
+              className={`flex items-center gap-2 px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                viewMode === "document"
+                  ? "bg-blue-600 text-white shadow-sm"
+                  : "text-gray-500 hover:text-gray-700"
+              }`}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Source Document
+            </button>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b border-gray-50 bg-gray-50">
-                  <th className="text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-6 py-3">Medication</th>
-                  <th className="text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-4 py-3">Dosage</th>
-                  <th className="text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-4 py-3">Frequency</th>
-                  <th className="text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-4 py-3">Confidence</th>
-                  <th className="text-left text-xs font-medium text-gray-400 uppercase tracking-wide px-4 py-3">Source Text</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-50">
-                {record.medications.map((med, i) => (
-                  <tr key={i} className="hover:bg-gray-50/50">
-                    <td className="px-6 py-4">
-                      <p className="text-sm font-semibold text-gray-900">{med.name}</p>
-                    </td>
-                    <td className="px-4 py-4 text-sm text-gray-700">{med.dosage}</td>
-                    <td className="px-4 py-4 text-sm text-gray-600">{med.frequency}</td>
-                    <td className="px-4 py-4">
-                      <span className={`text-xs font-medium px-2 py-0.5 rounded-full ${confidenceColor(med.confidence)}`}>
-                        {med.confidence}
-                      </span>
-                    </td>
-                    <td className="px-4 py-4 max-w-xs">
-                      <p className="text-xs text-gray-500 italic leading-relaxed">&ldquo;{med.relevantText}&rdquo;</p>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
+          {/* Edit mode toggle — only visible in extracted view */}
+          {viewMode === "extracted" && (
+            <button
+              onClick={() => setEditMode((e) => !e)}
+              className={`flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border transition-colors ${
+                editMode
+                  ? "bg-amber-50 border-amber-300 text-amber-800 hover:bg-amber-100"
+                  : "bg-white border-gray-200 text-gray-600 hover:border-gray-300 hover:text-gray-800"
+              }`}
+            >
+              {editMode ? (
+                <>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                  Done Editing
+                </>
+              ) : (
+                <>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                      d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                  Edit Extractions
+                </>
+              )}
+            </button>
+          )}
         </div>
 
-        {/* Diagnoses */}
-        <div className="bg-white rounded-xl border border-gray-200">
-          <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-2">
-            <div className="w-5 h-5 rounded bg-blue-100 flex items-center justify-center">
-              <svg className="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-              </svg>
-            </div>
-            <h3 className="text-sm font-semibold text-gray-900">Identified Diagnoses</h3>
-            <span className="ml-auto text-xs text-gray-400">{record.diagnoses.length} found</span>
+        {/* Edit mode banner */}
+        {editMode && viewMode === "extracted" && (
+          <div className="bg-amber-50 border border-amber-200 rounded-xl px-5 py-3 flex items-center gap-3">
+            <svg className="w-4 h-4 text-amber-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+            </svg>
+            <p className="text-sm text-amber-800">
+              <span className="font-semibold">Edit mode active.</span> Click &ldquo;Edit&rdquo; on any row to correct extracted data. Changes are reflected in the downloaded review form.
+            </p>
           </div>
+        )}
 
-          <div className="divide-y divide-gray-50">
-            {record.diagnoses.map((dx, i) => (
-              <div key={i} className="px-6 py-4 hover:bg-gray-50/50">
-                <div className="flex items-start justify-between gap-4">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <p className="text-sm font-semibold text-gray-900">{dx.name}</p>
-                      <span className="text-xs font-mono bg-gray-100 text-gray-600 px-1.5 py-0.5 rounded">
-                        {dx.icdCode}
-                      </span>
-                    </div>
-                    <p className="text-xs text-gray-500 italic leading-relaxed">&ldquo;{dx.relevantText}&rdquo;</p>
-                  </div>
-                  <div className="shrink-0 text-right">
-                    <p className="text-xs text-gray-400">{dx.dateContext}</p>
-                  </div>
+        {/* Main content area */}
+        {viewMode === "document" ? (
+          <DocumentViewer record={currentRecord} />
+        ) : (
+          <>
+            {/* Medications */}
+            <div className="bg-white rounded-xl border border-gray-200">
+              <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-2">
+                <div className="w-5 h-5 rounded bg-green-100 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4" />
+                  </svg>
                 </div>
+                <h3 className="text-sm font-semibold text-gray-900">Identified Medications</h3>
+                <span className="ml-auto text-xs text-gray-400">{medications.length} found</span>
               </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Extracted text */}
-        <div className="bg-white rounded-xl border border-gray-200">
-          <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-2">
-            <div className="w-5 h-5 rounded bg-purple-100 flex items-center justify-center">
-              <svg className="w-3 h-3 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h7" />
-              </svg>
+              <EditableMedicationsTable
+                medications={medications}
+                editMode={editMode}
+                onChange={setMedications}
+              />
             </div>
-            <h3 className="text-sm font-semibold text-gray-900">Extracted Document Text</h3>
-          </div>
-          <div className="px-6 py-5">
-            <pre className="text-xs text-gray-600 leading-relaxed whitespace-pre-wrap font-mono bg-gray-50 rounded-lg p-4 border border-gray-100">
-              {record.extractedText}
-            </pre>
-          </div>
-        </div>
 
-        {/* Bottom download CTA */}
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 flex items-center justify-between">
-          <div>
-            <p className="text-sm font-semibold text-blue-900">Ready to export this review?</p>
-            <p className="text-xs text-blue-600 mt-0.5">Download a complete review form with all extracted information.</p>
-          </div>
-          <DownloadButton record={record} />
-        </div>
+            {/* Diagnoses */}
+            <div className="bg-white rounded-xl border border-gray-200">
+              <div className="px-6 py-4 border-b border-gray-100 flex items-center gap-2">
+                <div className="w-5 h-5 rounded bg-blue-100 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5}
+                      d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
+                  </svg>
+                </div>
+                <h3 className="text-sm font-semibold text-gray-900">Identified Diagnoses</h3>
+                <span className="ml-auto text-xs text-gray-400">{diagnoses.length} found</span>
+              </div>
+              <EditableDiagnosisList
+                diagnoses={diagnoses}
+                editMode={editMode}
+                onChange={setDiagnoses}
+              />
+            </div>
+
+            {/* Bottom download CTA */}
+            <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 flex items-center justify-between">
+              <div>
+                <p className="text-sm font-semibold text-blue-900">Ready to export this review?</p>
+                <p className="text-xs text-blue-600 mt-0.5">
+                  The downloaded form will include any edits you&apos;ve made above.
+                </p>
+              </div>
+              <DownloadButton record={currentRecord} />
+            </div>
+          </>
+        )}
       </div>
     </AppShell>
   );
